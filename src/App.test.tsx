@@ -1,9 +1,29 @@
-import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('Renders "Hello World" text', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
+  const linkElement = screen.getByText('Hello World');
   expect(linkElement).toBeInTheDocument();
 });
+
+describe('Filter string tests', () => {
+  const testStrings = [
+    "hello world",
+    "hello%world",
+    "!hello world",
+    "hello?world!",
+    "hello;world",
+    "hello world?"
+  ]
+
+  const expected = "hello world"
+
+  testStrings.map(testStr => {
+    it(`Return ${expected} when string is ${testStr}`, () => {
+      const actual: string = replacePunctuation(testStr)
+
+      expect(actual).toBe(expected)
+    })
+  })
+})
