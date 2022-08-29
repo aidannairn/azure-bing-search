@@ -1,6 +1,6 @@
 const App = () => {
   return (
-    <div>Testing Node.js Workflow</div>
+    <div>Hello World</div>
   )
 }
 
