@@ -52,9 +52,9 @@ on:
       - "main"
 
 env:
-  PROJECT_ID: azure-bing-search # TODO: update Google Cloud project id
-  SERVICE: azure-bing-search # TODO: update Cloud Run service name
-  REGION: us-central1 # TODO: update Cloud Run service region
+  PROJECT_ID: 'azure-bing-search' # TODO: update Google Cloud project id
+  SERVICE: 'azure-bing-search' # TODO: update Cloud Run service name
+  REGION: 'us-central1' # TODO: update Cloud Run service region
 
 jobs:
   deploy:
